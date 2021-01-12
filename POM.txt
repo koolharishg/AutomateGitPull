@@ -1,0 +1,64 @@
+Page object model - design pattern
+Data Driven Framework
+TestNG - to write test cases
+ 
+for each & every page we have to create seperate java class
+
+for each page we have to define(these are called page libraries)
+- webelements
+- actions/methods - features
+
+Page Layer
+(Page Lib)
+
+Object Repository: A collection of all objects(web elements)
+
+-------
+Test Layer (written in TestNG)
+LoginPageTest.java
+HomePageTest.java
+xxxTest.java .....
+
+---one TestBase.java file for bothe layers:
+-> Page Layer
+-> Test Layer
+
+TestBase.java: 
+- Initialize driver
+- maximize window
+- page load time out
+- implicit wait
+- deleteAllCookies
+- get(URL)
+- Properties
+
+Config.properties(Environment Variables/Constants):
+URL
+Username
+Password
+Browser etc.
+
+--TestData.xlsx --differentSheets
+
+--TestUtil.java--
+-> screenshot()
+-> sendmail()
+-> commonutil()
+-> GenericFunctions()
+
+--TestReport: Pass/Fail
+-> HTML
+-> TestNG
+-> XML Reports
+-> ExtentReports
+
+Different Packages:
+all page classes: com.qa.pages
+all test classes: com.qa.tests
+base class      : com.qa.base
+Environment Variables: com.qa.config
+Test Data:           : com.qa.testdata
+Utility Functions    : com.qa.util
+Test Reports:        : TestOutput/Reports
+
+PageObjectModel is also called: PageChainingModel(POM)
