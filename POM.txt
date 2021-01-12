@@ -1,3 +1,5 @@
+Test Bazinga
+
 Page object model - design pattern
 Data Driven Framework
 TestNG - to write test cases
