@@ -1,4 +1,4 @@
-Test Bazinga
+This is Testing
 
 Page object model - design pattern
 Data Driven Framework
